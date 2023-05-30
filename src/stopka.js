@@ -46,8 +46,9 @@ const Stopka = () => {
             name='contact v1'
             method='post'
             data-netlify='true'
-            onSubmit='submit'>
-            <input type='hiden' name='form-name' value='contact v1'/>
+            onSubmit='submit'
+            nes>
+            <input type='hidden' name='form-name' value='contact v1'/>
             <input type="text" class="tekst" name="pytanie" id="pytanie" placeholder="Wprowadź tekst" />
             <button type="submit" class="wyslij">Wyślij</button>
           </form>
