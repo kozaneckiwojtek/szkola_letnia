@@ -1,0 +1,103 @@
+html,
+body {
+  font-family: sans-serif;
+}
+
+.opis {
+  background-color: #ffaa17;
+}
+
+
+
+
+#szkolaletnia {
+  font-size: 50px;
+  text-decoration: none;
+
+  font-family: sans-serif;
+  color: black;
+
+}
+
+
+
+
+#tekst {
+  padding: 40px;
+}
+
+#tekst h1 {
+  font-size: 40px;
+}
+
+
+#tekst p {
+  font-size: 25px;
+  padding: 10px;
+}
+
+#jeden {
+  border-radius: 90px;
+  padding: 10px;
+}
+
+#dwa {
+  border-radius: 90px;
+  padding: 10px;
+
+}
+
+#trzy {
+  border-radius: 90px;
+  padding: 10px;
+
+}
+
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffaa17;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  border: 2px solid #222429;
+
+}
+
+
+a.button:hover {
+  background-color: #222429;
+  color: white;
+}
+
+.kadra {
+  padding: 20px;
+}
+
+.miejsce {
+  border: 5px solid #ffaa17;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  background-color: #F4F5F8;
+  margin: 10px;
+}
+
+.miejsce img {
+  height: 411px;
+}
+
+.caption {
+  color: #F4F5F8;
+  text-align: center;
+}
+
+.miejsce:hover .caption {
+  color: black;
+}
+
+.caption {
+  font-weight: 600;
+  font-size: 20px;
+}

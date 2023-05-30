@@ -1,0 +1,56 @@
+.naglowek{
+    text-align: center;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #ffaa17;
+    padding: 20px;
+    background-color: #F4F5F8;
+    margin: 20px;
+}
+
+.kursy{
+    padding: 50px;
+}
+
+.szary{
+    color: gray;
+}
+
+#pp:hover{
+    width: 400px;
+    color: black;
+    content: url("/src/img/tekst_pp.png");
+    margin: 0;
+    padding: 0;
+}
+
+#bazy:hover{
+    width: 400px;
+    color: black;
+    content: url("/src/img/tekst_bazy.png");
+    margin: 0;
+    padding: 0;
+
+}
+
+#sieci:hover{
+    width: 400px;
+    color: black;
+    content: url("/src/img/tekst_sieci.png");
+    margin: 0;
+    padding: 0;
+
+}
+
+#grafika:hover{
+    width: 400px;
+    color: black;
+    content: url("/src/img/tekst_grafika.png");
+    margin: 0;
+    padding: 0;
+
+}
+

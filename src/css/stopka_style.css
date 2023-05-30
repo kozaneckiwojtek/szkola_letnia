@@ -1,0 +1,122 @@
+* {
+  font-family: sans-serif;
+}
+
+.stopka {
+  background-color: #222429;
+}
+
+.naglowki,
+.pod_opis {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.naglowek_duzy {
+  margin-top: 20px;
+  color: white;
+  font-size: 40px;
+}
+
+.footer-kontakt {
+  color: gray;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-kontakt #adres {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  background-image: url("/src/img/znacznik.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+
+
+}
+
+.footer-kontakt #tel {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  background-image: url("/src/img/tel.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+
+}
+
+.footer-kontakt #mail {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  background-image: url("/src/img/mail.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+
+}
+
+.footer-kontakt li a {
+  text-decoration: none;
+  color: gray;
+
+}
+
+
+.footer-list {
+  color: gray;
+  font-weight: bold;
+  padding: 0;
+  text-decoration: none;
+
+}
+
+.footer-list li a {
+  text-decoration: none;
+  color: gray;
+}
+
+.footer-list li {
+  color: gray;
+  font-weight: bold;
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+
+
+.footer-list li:before {
+  content: "\25B2";
+  transform: rotate(90deg);
+  display: inline-block;
+  margin-right: 5px;
+
+}
+
+
+.tekst {
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 64px;
+
+}
+
+.wyslij {
+  padding: 10px 20px;
+  border: none;
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  background-color: #FFAA17;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: -2px;
+  height: 60px;
+
+}
+
+#pytnie_form {
+  background-color: #222429;
+}

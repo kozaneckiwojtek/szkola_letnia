@@ -1,0 +1,61 @@
+.napis,
+.navi,
+.zadzwon {
+  padding: 20px;
+
+}
+
+.baner {
+  border-bottom: 1px solid rgb(210, 206, 209);
+}
+
+.napis h1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  margin: 0;
+}
+
+.baner_list {
+  list-style: none;
+  display: flex;
+  padding-top: 10px;
+  padding-right: 40px;
+
+}
+
+.baner_elemen a:hover {
+  color: #FFAA17;
+  text-decoration: none;
+}
+
+
+.baner_elemen a {
+  font-size: 25px;
+  padding-left: 40px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap
+}
+
+.zadzwon {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  border-left: 1px solid rgb(210, 206, 209);
+}
+
+.zadzwon img {
+  margin-right: 10px;
+}
+
+.zadzwon div,
+.zadzwon p {
+  margin: 0;
+}
+
+
+.navi {
+  display: flex;
+  justify-content: flex-end;
+}
