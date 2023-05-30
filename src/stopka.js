@@ -40,9 +40,9 @@ const Stopka = () => {
     </Col>
     <Col className='kol col-sm-12 col-md-12 col-lg-3'>
       <h2 class="naglowki">MASZ PYTANIA?</h2>
-      <form id="pytnie_form" netlify>
+      <form id="pytnie_form" netlify method="POST">
 
-      <input type="text" class="tekst" id="pytanie" placeholder="Wprowadź tekst" />
+      <input type="text" class="tekst" name="pytanie" id="pytanie" placeholder="Wprowadź tekst" />
       <button type="submit" class="wyslij">Wyślij</button>
       </form>
     </Col>
