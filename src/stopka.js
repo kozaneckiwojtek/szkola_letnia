@@ -43,12 +43,12 @@ const Stopka = () => {
           <h2 class="naglowki">MASZ PYTANIA?</h2>
           <form 
             id="pytnie_form" 
-            name='contact v1'
-            method='post'
-            data-netlify='true'
-            onSubmit='submit'
-            nes>
-            <input type='hidden' name='form-name' value='contact v1'/>
+            name="contact v1"
+            method="post"
+            data-netlify="true"
+            onSubmit="submit"
+            >
+            <input type="hidden" name="form-name" value="contact v1"/>
             <input type="text" class="tekst" name="pytanie" id="pytanie" placeholder="Wprowadź tekst" />
             <button type="submit" class="wyslij">Wyślij</button>
           </form>
