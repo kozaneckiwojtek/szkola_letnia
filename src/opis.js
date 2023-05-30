@@ -11,6 +11,8 @@ import jakubowski from './img/jakubowski.png'
 import kucharska from './img/kucharska.png'
 import zalewski from './img/zalewski.png'
 
+import { Link } from 'react-router-dom';
+
 export function Opis() {
   return (
     <>
@@ -21,7 +23,7 @@ export function Opis() {
             <p>
               Szkoła letnia to świetny sposób spędzenia wakacji. Pozwala ona połączyć intensywną naukę wraz z poznawaniem oraz integracją z innymi członkami. Zajęcia prowadzone są przez doświadczonych oraz kompetentnych wykładowców. Osoby biorące udział będą miały okazję na rozwinięcie swoich umiejętności w jednym z czterech pól związanych z informatyką tj. grafice komputerowej i druku 3D, programowaniu w języku C++, obsłudze baz danych przy pomocy języka SQL i Python czy zarządzaniu lokalną siecią komputerową i administrowaniu serwerami. Oprócz warsztatów, wieczorami prowadzone będą zajęcia, których tematy wychodzą poza ramy wybranego przez uczestnika kursu np. zagadnienia z zastosowań uczenia maszynowego oraz sztucznej inteligencji. Niektóre z nich będą prowadzone w języku angielskim przez zaproszonych z zagranicy gości.
             </p>
-            <a href="./form" className="button">Zapisz się</a>
+            <p className="button"><Link to="/form" className="button">Zapisz się</Link></p>
           </Col>
 
 
