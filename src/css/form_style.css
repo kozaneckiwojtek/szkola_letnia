@@ -64,7 +64,7 @@ body {
   color: black;
 }
 
-#name, #nazwisko, #email, #nr_tel, #ulica, #nr_domu, #miasto, #kod, #rok_studow{
+#name, #nazwisko, #email, #nr_tel, #nr_domu, #miasto, #kod, #rok_studow{
   width: 50%;
 }
 label{
@@ -75,13 +75,14 @@ label{
   padding: 10px;
 }
 
+
+
 #pole_rok, #pole_temat, #pole_nocleg, #pole_termin{
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
   padding: 10px;
   margin-bottom: 10px;
-
 }
 #pole_termin {
   position: relative;
@@ -225,6 +226,22 @@ label{
   width: 400px;
   height: 200px;
 }
+
+
+.slider-labels {
+  display: flex;
+  width: 73%;
+
+}
+
+.slider-labels span {
+  flex: 1;
+
+}
+
+
+
+
 
 
 

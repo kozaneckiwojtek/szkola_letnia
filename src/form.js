@@ -66,9 +66,9 @@ const Form = () => {
 
                 <input type="tel" class="wejscie" id="nr_tel" pattern="[0-9]{0,9}" placeholder="Numer telefonu" required={true} data-validation-required-message="Podaj numer telefonu" /><br />
 
-                <input type="text" class="wejscie" id="ulica" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,100}" placeholder="Ulica" required={true} data-validation-required-message="Ulica" />
+                <input type="text" class="wejscie" id="ulica" placeholder="Adres" required={true} data-validation-required-message="Ulica" />
 
-                <input type="text" class="wejscie" id="nr_domu" placeholder="Numer domu/mieszkania" required={true} data-validation-required-message="Podaj numer domu/mieszkania" /><br />
+                {/* <input type="text" class="wejscie" id="nr_domu" placeholder="Numer domu/mieszkania" required={true} data-validation-required-message="Podaj numer domu/mieszkania" /><br /> */}
 
                 <input type="text" class="wejscie" id="miasto" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Miejscowość" required={true} data-validation-required-message="Podaj swoja Miejscowość" />
 
@@ -79,12 +79,39 @@ const Form = () => {
                 <input type="text" class="wejscie" id="uczelnia" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Nazwa uczelni" required={true} data-validation-required-message="Podaj nazwę uczelni" /><br />
 
                 <div id='pole_rok'>
-                    <label>Wybierz rok studiów:<span className="selected-option">{selectedOption}</span> </label>
+                    <label>Wybierz rok studiów:</label>
 
-                    <input type="range" id="rok_studow" class="wejscie" name="rok_studow" required={true} min="1" max="3" step="1" onChange={handleRangeChange} data-validation-required-message="Podaj rok studiow" /><br />
-                    
+                    {/* <input type="range" id="rok_studow" class="wejscie" name="rok_studow" required={true} min="1" max="3" step="1" onChange={handleRangeChange} data-validation-required-message="Podaj rok studiow" /><br /> */}
+                    <div>
+                    <input
+                        type="range"
+                        id="rok_studow"
+                        className="wejscie"
+                        name="rok_studow"
+                        required={true}
+                        min="1"
+                        max="3"
+                        step="1"
+                        onChange={handleRangeChange}
+                        data-validation-required-message="Podaj rok studiów"
+                        list="rok_studow_scale"
+
+                    />
+                    <datalist id="rok_studow_scale">
+                        <option value="1" label="1" />
+                        <option value="2" label="2" />
+                        <option value="3" label="3" />
+                    </datalist>
+                    <div class="slider-labels">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+
+                    </div>
 
                 </div>
+
 
                 <div id='pole_temat'>
                     <label>Temat warsztatów: </label><br />
