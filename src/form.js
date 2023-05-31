@@ -5,10 +5,10 @@ const Form = () => {
     // const formRef = useRef(null)
     const scrollToTop = () => {
         window.scrollTo({
-          top: 0,
-          behavior: "smooth"
+            top: 0,
+            behavior: "smooth"
         });
-      };
+    };
     // const onSubmit = (e) => {
     //     e.preventDefault()
     //     const name = formRef.current.name.value
@@ -80,9 +80,9 @@ const Form = () => {
 
                 <div id='pole_rok'>
                     <label>Wybierz rok studiów:<span className="selected-option">{selectedOption}</span> </label>
-                    
-                    <input type="range" id="rok_studow" class="wejscie" name="rok_studow" required={true} min="1" max="3" step="1" onChange={handleRangeChange} data-validation-required-message="Podaj rok studiow" /><br />
 
+                    <input type="range" id="rok_studow" class="wejscie" name="rok_studow" required={true} min="1" max="3" step="1" onChange={handleRangeChange} data-validation-required-message="Podaj rok studiow" /><br />
+                    
 
                 </div>
 
@@ -96,7 +96,11 @@ const Form = () => {
                         data-validation-required-message="Podaj temat"
                     />
                     <label>
-                        Kurs Programowania
+
+
+                        <a id="tekst_temat1">Kurs Programowania</a>
+
+                        <div id="obrazek_temat1"></div>
                     </label>
 
                     <input
@@ -107,7 +111,10 @@ const Form = () => {
                         data-validation-required-message="Podaj temat"
                     />
                     <label>
-                        Obsługa baz danych
+
+                        <a id="tekst_temat2">Obsługa baz danych</a>
+
+                        <div id="obrazek_temat2"></div>
                     </label>
 
                     <input
@@ -118,7 +125,10 @@ const Form = () => {
                         data-validation-required-message="Podaj temat"
                     />
                     <label>
-                        Grafika komputerowa
+
+                        <a id="tekst_temat3">Grafika komputerowa</a>
+
+                        <div id="obrazek_temat3"></div>
                     </label>
 
                     <input
@@ -129,7 +139,10 @@ const Form = () => {
                         data-validation-required-message="Podaj temat"
                     />
                     <label>
-                        Sieci komputerowe
+
+                        <a id="tekst_temat4">Sieci komputerowe</a>
+
+                        <div id="obrazek_temat4"></div>
                     </label>
                 </div>
 
@@ -141,33 +154,33 @@ const Form = () => {
                 </select>
 
 
-               
+
 
                 <div id='pole_termin'>
-                <label>Termin szkoły letniej: </label><br />
+                    <label>Termin szkoły letniej: </label><br />
 
-                        <input type="radio" name="termin" value="1lipca - 15 lipca" required="required" data-validation-required-message="Wybierz termin"/>
+                    <input type="radio" name="termin" value="1lipca - 15 lipca" required="required" data-validation-required-message="Wybierz termin" />
                     <label >
-                            <a id="tekst1">1lipca - 15 lipca</a>
-                            
-                            <div id="obrazek1"></div>
+                        <a id="tekst1">1 lipca - 15 lipca</a>
+
+                        <div id="obrazek1"></div>
                     </label>
 
-                        <input type="radio" name="termin" value="17 lipca - 31 lipca" required="required" data-validation-required-message="Wybierz termin"/>
+                    <input type="radio" name="termin" value="17 lipca - 31 lipca" required="required" data-validation-required-message="Wybierz termin" />
                     <label>
-                            
-                            <a id="tekst2">17 lipca - 31 lipca</a>
-                            
-                            <div id="obrazek2"></div>
+
+                        <a id="tekst2">17 lipca - 31 lipca</a>
+
+                        <div id="obrazek2"></div>
                     </label>
 
-                        <input type="radio" name="termin" value="7 sierpnia - 21 sierpnia" required="required" data-validation-required-message="Wybierz termin"/>
-                            
+                    <input type="radio" name="termin" value="7 sierpnia - 21 sierpnia" required="required" data-validation-required-message="Wybierz termin" />
+
                     <label>
-                            
-                            <a id="tekst3">7 sierpnia - 21 sierpnia</a>
-                            
-                            <div id="obrazek3"></div>
+
+                        <a id="tekst3">7 sierpnia - 21 sierpnia</a>
+
+                        <div id="obrazek3"></div>
                     </label>
 
                 </div>

@@ -90,13 +90,13 @@ label{
 #obrazek1 {
   display: none;
   position: absolute;
-  top: 100px; /* Przesuń obrazek w dół o 30 pikseli */
-  left: 20px; /* Przesuń obrazek w prawo o 20 pikseli */
+  top: 100px; 
+  left: 20px; 
   width: 0;
   height: 0;
   background-image: url("/src/img/t_pierwszy.png");
   background-size: cover;
-  z-index: 9999; /* Ustawienie wysokiej wartości z-index */
+  z-index: 9999; 
 }
 
 #tekst1:hover + #obrazek1 {
@@ -108,13 +108,13 @@ label{
 #obrazek2 {
   display: none;
   position: absolute;
-  top: 100px; /* Przesuń obrazek w dół o 30 pikseli */
-  left: 120px; /* Przesuń obrazek w prawo o 20 pikseli */
+  top: 100px; 
+  left: 120px; 
   width: 0;
   height: 0;
   background-image: url("/src/img/t_drugi.png");
   background-size: cover;
-  z-index: 9999; /* Ustawienie wysokiej wartości z-index */
+  z-index: 9999; 
 }
 
 #tekst2:hover + #obrazek2 {
@@ -129,13 +129,13 @@ label{
 #obrazek3 {
   display: none;
   position: absolute;
-  top: 100px; /* Przesuń obrazek w dół o 30 pikseli */
-  left: 300px; /* Przesuń obrazek w prawo o 20 pikseli */
+  top: 100px;
+  left: 300px; 
   width: 0;
   height: 0;
   background-image: url("/src/img/t_trzeci.png");
   background-size: cover;
-  z-index: 9999; /* Ustawienie wysokiej wartości z-index */
+  z-index: 9999;
 }
 
 #tekst3:hover + #obrazek3 {
@@ -146,6 +146,85 @@ label{
 
 
 #pole_rok input{
-  /* display: inline-block; */
   padding: 0;
 }
+
+
+#pole_temat {
+  position: relative;
+}
+
+#obrazek_temat1 {
+  display: none;
+  position: absolute;
+  top: 100px; 
+  left: 20px; 
+  width: 0;
+  height: 0;
+  background-image: url("/src/img/tekst_pp.png");
+  background-size: cover;
+  z-index: 9999; 
+}
+
+#tekst_temat1:hover + #obrazek_temat1 {
+  display: block;
+  width: 400px;
+  height: 200px;
+}
+
+#obrazek_temat2 {
+  display: none;
+  position: absolute;
+  top: 100px; 
+  left: 120px; 
+  width: 0;
+  height: 0;
+  background-image: url("/src/img/tekst_bazy.png");
+  background-size: cover;
+  z-index: 9999; 
+}
+
+#tekst_temat2:hover + #obrazek_temat2 {
+  display: block;
+  width: 400px;
+  height: 200px;
+}
+
+#obrazek_temat3 {
+  display: none;
+  position: absolute;
+  top: 100px; 
+  left: 250px; 
+  width: 0;
+  height: 0;
+  background-image: url("/src/img/tekst_grafika.png");
+  background-size: cover;
+  z-index: 9999; 
+}
+
+#tekst_temat3:hover + #obrazek_temat3 {
+  display: block;
+  width: 400px;
+  height: 200px;
+}
+
+#obrazek_temat4 {
+  display: none;
+  position: absolute;
+  top: 100px; 
+  left: 350px; 
+  width: 0;
+  height: 0;
+  background-image: url("/src/img/tekst_sieci.png");
+  background-size: cover;
+  z-index: 9999; 
+}
+
+#tekst_temat4:hover + #obrazek_temat4 {
+  display: block;
+  width: 400px;
+  height: 200px;
+}
+
+
+
