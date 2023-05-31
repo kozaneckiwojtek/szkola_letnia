@@ -16,7 +16,7 @@ body {
   font-size: 30px;
 }
 
-form {
+#form {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -62,4 +62,90 @@ form {
 
 ::placeholder {
   color: black;
+}
+
+#name, #nazwisko, #email, #nr_tel, #ulica, #nr_domu, #miasto, #kod, #rok_studow{
+  width: 50%;
+}
+label{
+  padding: 10px;
+}
+
+.selected-option{
+  padding: 10px;
+}
+
+#pole_rok, #pole_temat, #pole_nocleg, #pole_termin{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+
+}
+#pole_termin {
+  position: relative;
+}
+
+#obrazek1 {
+  display: none;
+  position: absolute;
+  top: 100px; /* Przesuń obrazek w dół o 30 pikseli */
+  left: 20px; /* Przesuń obrazek w prawo o 20 pikseli */
+  width: 0;
+  height: 0;
+  background-image: url("/src/img/t_pierwszy.png");
+  background-size: cover;
+  z-index: 9999; /* Ustawienie wysokiej wartości z-index */
+}
+
+#tekst1:hover + #obrazek1 {
+  display: block;
+  width: 235px;
+  height: 246px;
+}
+
+#obrazek2 {
+  display: none;
+  position: absolute;
+  top: 100px; /* Przesuń obrazek w dół o 30 pikseli */
+  left: 120px; /* Przesuń obrazek w prawo o 20 pikseli */
+  width: 0;
+  height: 0;
+  background-image: url("/src/img/t_drugi.png");
+  background-size: cover;
+  z-index: 9999; /* Ustawienie wysokiej wartości z-index */
+}
+
+#tekst2:hover + #obrazek2 {
+  display: block;
+  width: 235px;
+  height: 246px;
+}
+
+
+
+
+#obrazek3 {
+  display: none;
+  position: absolute;
+  top: 100px; /* Przesuń obrazek w dół o 30 pikseli */
+  left: 300px; /* Przesuń obrazek w prawo o 20 pikseli */
+  width: 0;
+  height: 0;
+  background-image: url("/src/img/t_trzeci.png");
+  background-size: cover;
+  z-index: 9999; /* Ustawienie wysokiej wartości z-index */
+}
+
+#tekst3:hover + #obrazek3 {
+  display: block;
+  width: 235px;
+  height: 246px;
+}
+
+
+#pole_rok input{
+  /* display: inline-block; */
+  padding: 0;
 }

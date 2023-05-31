@@ -1,73 +1,207 @@
-import React from 'react'
+import { useRef, useState } from 'react'
 import './css/form_style.css'
 const Form = () => {
+    const [selectedOption, setSelectedOption] = useState('');
+    // const formRef = useRef(null)
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      };
+    // const onSubmit = (e) => {
+    //     e.preventDefault()
+    //     const name = formRef.current.name.value
+    //     const nazwisko = formRef.current.nazwisko.value
+    //     const email = formRef.current.email.value
+    //     const tel = formRef.current.nr_tel.value
+    //     const ulica = formRef.current.ulica.value
+    //     const dom = formRef.current.nr_domu.value
+    //     const kod = formRef.current.kod.value
+    //     const miasto = formRef.current.miasto.value
+    //     const rok = formRef.current.rok.value
+    //     const uczelnia = formRef.current.uczelnia.value
+    //     const kierunek = formRef.current.kierunek.value
+    //     const rok_studow = formRef.current.rok_studow.value
+    //     const temat = formRef.current.temat.value
+    //     const poziom = formRef.current.poziom.value
+    //     const termin = formRef.current.termin.value
+    //     const nocleg = formRef.current.nocleg.value
+
+
+
+    //     fetch("http://localhost:5555/posts", {
+    //         method: "POST",
+    //         body: JSON.stringify({ name, nazwisko, email, tel, ulica, dom, kod, miasto, rok, uczelnia, kierunek, rok_studow, temat, poziom, termin, nocleg }),
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+
+    //     }).then((res) => { return res.json() }).then(
+    //         (res) => {
+    //             console.log(res)
+    //         }
+    //     )
+
+    //     // window.location.reload();
+    // }
+
+    const handleRangeChange = (e) => {
+        setSelectedOption(e.target.value);
+    };
+
     return (
 
         <div>
 
-            <form id="form" netlify>
+            <form id="form" /*onSubmit={onSubmit} ref={formRef}*/ acceptCharset="UTF-8">
                 <h1><strong>Formularz rejestracyjny na szkołę letnią</strong></h1>
 
-                <input type="text" class="wejscie" id="name" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,20}" placeholder="Imię" required={true} aria-label="Wpisz swoje imię" data-validation-required-message="Podaj swoje imię" />
+                <input type="text" className="wejscie" id="name" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,20}" placeholder="Imię" aria-label="Wpisz swoje imię" data-validation-required-message="Podaj swoje imię" required />
 
-                <input type="text" class="wejscie" id="nazwisko" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,20}" placeholder="Nazwisko" required="required" data-validation-required-message="Podaj swoje nazwisko" />
+                <input type="text" class="wejscie" id="nazwisko" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,20}" placeholder="Nazwisko" required={true} data-validation-required-message="Podaj swoje nazwisko" /><br />
 
-                <input type="email" class="wejscie" id="email" placeholder="E-mail" required="required" data-validation-required-message="Podaj swój email" />
-
-                <input type="tel" class="wejscie" id="nr_tel" pattern="[0-9]{0,9}" placeholder="Numer telefonu" required="required" data-validation-required-message="Podaj numer telefonu" />
-
-                <input type="text" class="wejscie" id="ulica" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,100}" placeholder="Ulica" required="required" data-validation-required-message="Ulica" />
-
-                <input type="text" class="wejscie" id="nr_domu" placeholder="Numer domu/mieszkania" required="required" data-validation-required-message="Podaj numer domu/mieszkania" />
-
-                <input type="text" class="wejscie" id="kod" pattern="[0-9]{2}-[0-9]{3}" placeholder="Kod pocztowy" required="required" data-validation-required-message="Kod pocztowy" />
-
-                <input type="text" class="wejscie" id="miasto" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Miejscowość" required="required" data-validation-required-message="Podaj swoja Miejscowość" />
-
-                <input type="text" class="wejscie" id="rok" pattern="[0-9]{4}" placeholder="Rok urodzenia" required="required" data-validation-required-message="Podaj rok urodzenia" onfocus="(this.type='date')" />
-
-                <input type="text" class="wejscie" id="uczelnia" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Nazwa uczelni" required="required" data-validation-required-message="Podaj nazwę uczelni" />
-
-                <input type="text" class="wejscie" id="kierunek" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Kierunek studiów" required="required" data-validation-required-message="Podaj kierunek, który studiujesz" />
+                <input type="email" class="wejscie" id="email" placeholder="E-mail" required={true} data-validation-required-message="Podaj swój email" />
 
 
-                <select name="rok_studow" class="wejscie" id="rok_studow" required="required" data-validation-required-message="Podaj rok studiow" >
-                    <option value="" disabled selected hidden>Rok studiów</option>
-                    <option value="Rok 1">Rok 1</option>
-                    <option value="Rok 2">Rok 2</option>
-                </select>
+                <input type="tel" class="wejscie" id="nr_tel" pattern="[0-9]{0,9}" placeholder="Numer telefonu" required={true} data-validation-required-message="Podaj numer telefonu" /><br />
 
-                <select name="temat" class="wejscie" id="temat" required="required" data-validation-required-message="Podaj temat" >
-                    <option value="" disabled selected hidden>Temat warsztatów</option>
-                    <option>Kurs Programowania</option>
-                    <option>Obsługa baz danych</option>
-                    <option>Grafika komputerowa</option>
-                    <option>Sieci komputerowe</option>
-                </select>
+                <input type="text" class="wejscie" id="ulica" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,100}" placeholder="Ulica" required={true} data-validation-required-message="Ulica" />
 
-                <select name="poziom" class="wejscie" id="poziom" required="required" data-validation-required-message="Podaj swoj poziom" >
+                <input type="text" class="wejscie" id="nr_domu" placeholder="Numer domu/mieszkania" required={true} data-validation-required-message="Podaj numer domu/mieszkania" /><br />
+
+                <input type="text" class="wejscie" id="miasto" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Miejscowość" required={true} data-validation-required-message="Podaj swoja Miejscowość" />
+
+                <input type="text" class="wejscie" id="kod" pattern="[0-9]{2}-[0-9]{3}" placeholder="Kod pocztowy" required={true} data-validation-required-message="Kod pocztowy" /><br />
+
+                <input type="text" class="wejscie" id="rok" pattern="[0-9]{4}" placeholder="Rok urodzenia" required={true} data-validation-required-message="Podaj rok urodzenia" onfocus="(this.type='date')" /><br />
+
+                <input type="text" class="wejscie" id="uczelnia" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Nazwa uczelni" required={true} data-validation-required-message="Podaj nazwę uczelni" /><br />
+
+                <div id='pole_rok'>
+                    <label>Wybierz rok studiów:<span className="selected-option">{selectedOption}</span> </label>
+                    
+                    <input type="range" id="rok_studow" class="wejscie" name="rok_studow" required={true} min="1" max="3" step="1" onChange={handleRangeChange} data-validation-required-message="Podaj rok studiow" /><br />
+
+
+                </div>
+
+                <div id='pole_temat'>
+                    <label>Temat warsztatów: </label><br />
+                    <input
+                        type="radio"
+                        name="temat"
+                        value="Kurs Programowania"
+                        required={true}
+                        data-validation-required-message="Podaj temat"
+                    />
+                    <label>
+                        Kurs Programowania
+                    </label>
+
+                    <input
+                        type="radio"
+                        name="temat"
+                        value="Obsługa baz danych"
+                        required={true}
+                        data-validation-required-message="Podaj temat"
+                    />
+                    <label>
+                        Obsługa baz danych
+                    </label>
+
+                    <input
+                        type="radio"
+                        name="temat"
+                        value="Grafika komputerowa"
+                        required={true}
+                        data-validation-required-message="Podaj temat"
+                    />
+                    <label>
+                        Grafika komputerowa
+                    </label>
+
+                    <input
+                        type="radio"
+                        name="temat"
+                        value="Sieci komputerowe"
+                        required={true}
+                        data-validation-required-message="Podaj temat"
+                    />
+                    <label>
+                        Sieci komputerowe
+                    </label>
+                </div>
+
+                <select name="poziom" class="wejscie" id="poziom" required={true} data-validation-required-message="Podaj swoj poziom" >
                     <option value="" disabled selected hidden>Poziom języka angielskiego</option>
                     <option>B1</option>
                     <option>B2</option>
                     <option>C1</option>
                 </select>
 
-                <select name="text" class="wejscie" id="termin" required="required" data-validation-required-message="Wybierz termin" >
-                    <option value="" disabled selected hidden>Termin szkoły letniej</option>
-                    <option>30 czerwca - 14 lipca</option>
-                    <option>17 lipca -  31 lipca</option>
-                    <option>7 sierpnia - 21 sierpnia</option>
-                </select>
 
-                <select name="nocleg" class="wejscie" id="nocleg" required="required" data-validation-required-message="Wybierz opcje" >
-                    <option value="" disabled selected hidden>Potrzebujesz noclegu?</option>
-                    <option>TAK</option>
-                    <option>NIE</option>
-                </select>
+               
 
+                <div id='pole_termin'>
+                <label>Termin szkoły letniej: </label><br />
+
+                        <input type="radio" name="termin" value="1lipca - 15 lipca" required="required" data-validation-required-message="Wybierz termin"/>
+                    <label >
+                            <a id="tekst1">1lipca - 15 lipca</a>
+                            
+                            <div id="obrazek1"></div>
+                    </label>
+
+                        <input type="radio" name="termin" value="17 lipca - 31 lipca" required="required" data-validation-required-message="Wybierz termin"/>
+                    <label>
+                            
+                            <a id="tekst2">17 lipca - 31 lipca</a>
+                            
+                            <div id="obrazek2"></div>
+                    </label>
+
+                        <input type="radio" name="termin" value="7 sierpnia - 21 sierpnia" required="required" data-validation-required-message="Wybierz termin"/>
+                            
+                    <label>
+                            
+                            <a id="tekst3">7 sierpnia - 21 sierpnia</a>
+                            
+                            <div id="obrazek3"></div>
+                    </label>
+
+                </div>
+
+
+                <div id='pole_nocleg'>
+                    <label>Potrzebujesz noclegu? </label><br />
+
+                    <input
+                        type="radio"
+                        name="nocleg"
+                        value="TAK"
+                        required={true}
+                        data-validation-required-message="Wybierz opcję"
+                    />
+                    <label>
+
+                        TAK
+                    </label>
+                    <input
+                        type="radio"
+                        name="nocleg"
+                        value="NIE"
+                        required={true}
+                        data-validation-required-message="Wybierz opcję"
+                    />
+                    <label>
+                        NIE
+                    </label>
+
+                </div>
                 <div class="przyciski">
                     <button type="submit" id="sub_button" class="bnt_sub">Prześlij formularz</button>
-                    <button type="button" class="bnt_but" onClick={() => window.location.reload()}>Wyczyść formularz</button>
+                    <button type="button" class="bnt_but" onClick={() => window.location.reload()} onclick={scrollToTop()}>Wyczyść formularz</button>
                 </div>
 
                 {/* <button type="reset" id="clear_button">Wyczyść formularz</button> */}
