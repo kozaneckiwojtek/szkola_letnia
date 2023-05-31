@@ -213,7 +213,7 @@ const Form = () => {
 
                 </div>
                 <div class="przyciski">
-                    <button type="submit" id="sub_button" class="bnt_sub">Prześlij formularz</button>
+                    <button type="submit" id="sub_button" class="bnt_sub" onClick={() => window.location.reload()} onclick={scrollToTop()}>Prześlij formularz</button>
                     <button type="button" class="bnt_but" onClick={() => window.location.reload()} onclick={scrollToTop()}>Wyczyść formularz</button>
                 </div>
 
