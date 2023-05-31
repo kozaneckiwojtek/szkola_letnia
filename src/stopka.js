@@ -72,7 +72,7 @@ const Stopka = () => {
       <form id="pytnie_form" /*onSubmit={onSubmit} ref={formRef}*/ acceptCharset="UTF-8">
 
       <input type="text" class="tekst" id="pytanie" placeholder="Wprowadź tekst" />
-      <button type="submit" class="wyslij" /*onClick={() => window.location.reload()} onclick={scrollToTop()}*/>Wyślij</button>
+      <button type="submit" class="wyslij" onClick={() => window.location.reload()} onclick={scrollToTop()}>Wyślij</button>
       </form>
     </Col>
   </Row>
