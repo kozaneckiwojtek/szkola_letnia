@@ -60,7 +60,7 @@ const Form = () => {
                 </select>
 
                 <select name="nocleg" class="wejscie" id="nocleg" required="required" data-validation-required-message="Wybierz opcje" >
-                    <option value="" disabled selected hidden>Potrzebujesz nocelgu?</option>
+                    <option value="" disabled selected hidden>Potrzebujesz noclegu?</option>
                     <option>TAK</option>
                     <option>NIE</option>
                 </select>
