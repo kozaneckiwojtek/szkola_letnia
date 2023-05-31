@@ -11,6 +11,16 @@ import { Opis } from "./opis"
 function App() {
   return (
     <>
+      const express = require('express');
+      const path = require('path');
+      const app = express();
+
+      // Dodaj poniższe linie przed zdefiniowaniem innych tras
+      app.use(express.static(path.join(__dirname, 'build')));
+
+      app.get('/*', function (req, res) {
+        res.sendFile(path.join(__dirname, 'build', 'index.html'))
+      });
 
       <Baner />
 
@@ -23,7 +33,9 @@ function App() {
       <Stopka />
 
 
-
+      app.listen(3000, function () {
+  console.log('Serwer został uruchomiony na porcie 3000!')
+});
     </>
   )
 }
