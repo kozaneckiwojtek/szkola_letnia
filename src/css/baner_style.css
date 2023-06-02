@@ -59,3 +59,35 @@
   display: flex;
   justify-content: flex-end;
 }
+
+
+
+
+
+@media (max-width: 400px) {
+  .baner_list {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto;
+    padding: auto;
+  }
+
+  .baner_elemen {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .baner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .napis,
+  .navi,
+  .zadzwon {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+}

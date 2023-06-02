@@ -265,3 +265,12 @@ label{
 }
 
 
+
+
+.temat-label input[type="radio"] {
+  margin-right: 10px; /* Dodaje odstęp na prawo pola wyboru */
+}
+
+.termin-label input[type="radio"] {
+  margin-right: 10px; /* Dodaje odstęp na prawo pola wyboru */
+}
