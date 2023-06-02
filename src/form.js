@@ -1,14 +1,57 @@
 import { useRef, useState } from 'react'
+
 import './css/form_style.css'
 const Form = () => {
     const [selectedOption, setSelectedOption] = useState('');
-    // const formRef = useRef(null)
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+
+    const [mailPlaceholder, setMailPlaceholder] = useState('E-mail');
+
+    const handleMouseEntermail = () => {
+        setMailPlaceholder('Format: login@domain');
     };
+
+    const handleMouseLeavemail = () => {
+        setMailPlaceholder('E-mail');
+    };
+
+
+    const [telPlaceholder, setTelPlaceholder] = useState('Numer telefonu');
+
+    const handleMouseEntertel = () => {
+        setTelPlaceholder('Format: 123456789');
+    };
+
+    const handleMouseLeavetel = () => {
+        setTelPlaceholder('Numer telefonu');
+    };
+
+    const [adresPlaceholder, setAdresPlaceholder] = useState('Adres');
+
+    const handleMouseEnteradres = () => {
+        setAdresPlaceholder('Format: Polna 2/3');
+    };
+
+    const handleMouseLeaveadres = () => {
+        setAdresPlaceholder('Adres');
+    };
+
+    const [kodPlaceholder, setKodPlaceholder] = useState('Kod pocztowy');
+
+    const handleMouseEnterkod = () => {
+        setKodPlaceholder('Format: 12-345');
+    };
+
+    const handleMouseLeavekod = () => {
+        setKodPlaceholder('Kod pocztowy');
+    };
+
+    // const formRef = useRef(null)
+    // const scrollToTop = () => {
+    //     window.scrollTo({
+    //         top: 0,
+    //         behavior: "smooth"
+    //     });
+    // };
     // const onSubmit = (e) => {
     //     e.preventDefault()
     //     const name = formRef.current.name.value
@@ -61,18 +104,18 @@ const Form = () => {
 
                 <input type="text" class="wejscie" id="nazwisko" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,20}" placeholder="Nazwisko" required={true} data-validation-required-message="Podaj swoje nazwisko" /><br />
 
-                <input type="email" class="wejscie" id="email" placeholder="E-mail" required={true} data-validation-required-message="Podaj swój email" />
+                <input type="email" class="wejscie" id="email" placeholder={mailPlaceholder} required={true} data-validation-required-message="Podaj swój email" onMouseEnter={handleMouseEntermail} onMouseLeave={handleMouseLeavemail} />
 
 
-                <input type="tel" class="wejscie" id="nr_tel" pattern="[0-9]{0,9}" placeholder="Numer telefonu" required={true} data-validation-required-message="Podaj numer telefonu" /><br />
+                <input type="tel" class="wejscie" id="nr_tel" pattern="[0-9]{0,9}" placeholder={telPlaceholder} required={true} data-validation-required-message="Podaj numer telefonu" onMouseEnter={handleMouseEntertel} onMouseLeave={handleMouseLeavetel} /><br />
 
-                <input type="text" class="wejscie" id="ulica" placeholder="Adres" required={true} data-validation-required-message="Ulica" />
+                <input type="text" class="wejscie" id="ulica" placeholder={adresPlaceholder} required={true} data-validation-required-message="Ulica" onMouseEnter={handleMouseEnteradres} onMouseLeave={handleMouseLeaveadres} />
 
                 {/* <input type="text" class="wejscie" id="nr_domu" placeholder="Numer domu/mieszkania" required={true} data-validation-required-message="Podaj numer domu/mieszkania" /><br /> */}
 
                 <input type="text" class="wejscie" id="miasto" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Miejscowość" required={true} data-validation-required-message="Podaj swoja Miejscowość" />
 
-                <input type="text" class="wejscie" id="kod" pattern="[0-9]{2}-[0-9]{3}" placeholder="Kod pocztowy" required={true} data-validation-required-message="Kod pocztowy" /><br />
+                <input type="text" class="wejscie" id="kod" pattern="[0-9]{2}-[0-9]{3}" placeholder={kodPlaceholder} required={true} data-validation-required-message="Kod pocztowy" onMouseEnter={handleMouseEnterkod} onMouseLeave={handleMouseLeavekod} /><br />
 
                 <input type="text" class="wejscie" id="rok" pattern="[0-9]{4}" placeholder="Rok urodzenia" required={true} data-validation-required-message="Podaj rok urodzenia" onfocus="(this.type='date')" /><br />
 
@@ -83,30 +126,30 @@ const Form = () => {
 
                     {/* <input type="range" id="rok_studow" class="wejscie" name="rok_studow" required={true} min="1" max="3" step="1" onChange={handleRangeChange} data-validation-required-message="Podaj rok studiow" /><br /> */}
                     <div>
-                    <input
-                        type="range"
-                        id="rok_studow"
-                        className="wejscie"
-                        name="rok_studow"
-                        required={true}
-                        min="1"
-                        max="3"
-                        step="1"
-                        onChange={handleRangeChange}
-                        data-validation-required-message="Podaj rok studiów"
-                        list="rok_studow_scale"
+                        <input
+                            type="range"
+                            id="rok_studow"
+                            className="wejscie"
+                            name="rok_studow"
+                            required={true}
+                            min="1"
+                            max="3"
+                            step="1"
+                            onChange={handleRangeChange}
+                            data-validation-required-message="Podaj rok studiów"
+                            list="rok_studow_scale"
 
-                    />
-                    <datalist id="rok_studow_scale">
-                        <option value="1" label="1" />
-                        <option value="2" label="2" />
-                        <option value="3" label="3" />
-                    </datalist>
-                    <div class="slider-labels">
-                        <span>1</span>
-                        <span>2</span>
-                        <span>3</span>
-                    </div>
+                        />
+                        <datalist id="rok_studow_scale">
+                            <option value="1" label="1" />
+                            <option value="2" label="2" />
+                            <option value="3" label="3" />
+                        </datalist>
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
 
                     </div>
 
@@ -114,61 +157,51 @@ const Form = () => {
 
 
                 <div id='pole_temat'>
-                    <label>Temat warsztatów: </label><br />
-                    <input
-                        type="radio"
-                        name="temat"
-                        value="Kurs Programowania"
-                        required={true}
-                        data-validation-required-message="Podaj temat"
-                    />
-                    <label>
-
-
+                    <label class="temat-label">
+                        <input
+                            type="radio"
+                            name="temat"
+                            value="Kurs Programowania"
+                            required={true}
+                            data-validation-required-message="Podaj temat"
+                        />
                         <a id="tekst_temat1">Kurs Programowania</a>
-
                         <div id="obrazek_temat1"></div>
                     </label>
 
-                    <input
-                        type="radio"
-                        name="temat"
-                        value="Obsługa baz danych"
-                        required={true}
-                        data-validation-required-message="Podaj temat"
-                    />
-                    <label>
-
+                    <label class="temat-label">
+                        <input
+                            type="radio"
+                            name="temat"
+                            value="Obsługa baz danych"
+                            required={true}
+                            data-validation-required-message="Podaj temat"
+                        />
                         <a id="tekst_temat2">Obsługa baz danych</a>
-
                         <div id="obrazek_temat2"></div>
                     </label>
 
-                    <input
-                        type="radio"
-                        name="temat"
-                        value="Grafika komputerowa"
-                        required={true}
-                        data-validation-required-message="Podaj temat"
-                    />
-                    <label>
-
+                    <label class="temat-label">
+                        <input
+                            type="radio"
+                            name="temat"
+                            value="Grafika komputerowa"
+                            required={true}
+                            data-validation-required-message="Podaj temat"
+                        />
                         <a id="tekst_temat3">Grafika komputerowa</a>
-
                         <div id="obrazek_temat3"></div>
                     </label>
 
-                    <input
-                        type="radio"
-                        name="temat"
-                        value="Sieci komputerowe"
-                        required={true}
-                        data-validation-required-message="Podaj temat"
-                    />
-                    <label>
-
+                    <label class="temat-label">
+                        <input
+                            type="radio"
+                            name="temat"
+                            value="Sieci komputerowe"
+                            required={true}
+                            data-validation-required-message="Podaj temat"
+                        />
                         <a id="tekst_temat4">Sieci komputerowe</a>
-
                         <div id="obrazek_temat4"></div>
                     </label>
                 </div>
@@ -184,32 +217,24 @@ const Form = () => {
 
 
                 <div id='pole_termin'>
-                    <label>Termin szkoły letniej: </label><br />
-
-                    <input type="radio" name="termin" value="1lipca - 15 lipca" required="required" data-validation-required-message="Wybierz termin" />
-                    <label >
+                    <label class="termin-label">
+                        <span></span>
+                        <input type="radio" name="termin" value="1lipca - 15 lipca" required="required" data-validation-required-message="Wybierz termin" />
                         <a id="tekst1">1 lipca - 15 lipca</a>
-
                         <div id="obrazek1"></div>
                     </label>
 
-                    <input type="radio" name="termin" value="17 lipca - 31 lipca" required="required" data-validation-required-message="Wybierz termin" />
-                    <label>
-
+                    <label class="termin-label">
+                        <input type="radio" name="termin" value="17 lipca - 31 lipca" required="required" data-validation-required-message="Wybierz termin" />
                         <a id="tekst2">17 lipca - 31 lipca</a>
-
                         <div id="obrazek2"></div>
                     </label>
 
-                    <input type="radio" name="termin" value="7 sierpnia - 21 sierpnia" required="required" data-validation-required-message="Wybierz termin" />
-
-                    <label>
-
+                    <label class="termin-label">
+                        <input type="radio" name="termin" value="7 sierpnia - 21 sierpnia" required="required" data-validation-required-message="Wybierz termin" />
                         <a id="tekst3">7 sierpnia - 21 sierpnia</a>
-
                         <div id="obrazek3"></div>
                     </label>
-
                 </div>
 
 
@@ -240,11 +265,16 @@ const Form = () => {
 
                 </div>
                 <div class="przyciski">
-                    <button type="submit" id="sub_button" class="bnt_sub" onclick={scrollToTop()}>Prześlij formularz</button>
-                    <button type="button" class="bnt_but" onClick={() => window.location.reload()} onclick={scrollToTop()}>Wyczyść formularz</button>
+                    <button type="submit" id="sub_button" class="bnt_sub" /*onclick={scrollToTop()}*/>Prześlij formularz</button>
+                    <button type="button" class="bnt_but" onClick={() => window.location.reload()} /*onclick={scrollToTop()}*/>Wyczyść formularz</button>
                 </div>
 
                 {/* <button type="reset" id="clear_button">Wyczyść formularz</button> */}
+
+
+
+
+
             </form>
         </div>
 

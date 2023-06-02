@@ -91,8 +91,10 @@ label{
 #obrazek1 {
   display: none;
   position: absolute;
-  top: 100px; 
-  left: 20px; 
+  /* top: 100px; 
+  left: 20px;  */
+  top: auto;
+  left: auto;
   width: 0;
   height: 0;
   background-image: url("/src/img/t_pierwszy.png");
@@ -109,8 +111,10 @@ label{
 #obrazek2 {
   display: none;
   position: absolute;
-  top: 100px; 
-  left: 120px; 
+  /* top: 100px; 
+  left: 120px;  */
+  top: auto;
+  left: auto;
   width: 0;
   height: 0;
   background-image: url("/src/img/t_drugi.png");
@@ -130,8 +134,10 @@ label{
 #obrazek3 {
   display: none;
   position: absolute;
-  top: 100px;
-  left: 300px; 
+  /* top: 100px;
+  left: 300px;  */
+  top: auto;
+  left: auto;
   width: 0;
   height: 0;
   background-image: url("/src/img/t_trzeci.png");
@@ -158,8 +164,10 @@ label{
 #obrazek_temat1 {
   display: none;
   position: absolute;
-  top: 100px; 
-  left: 20px; 
+  /* top: 100px; 
+  left: 20px;  */
+  top: auto;
+  left: auto;
   width: 0;
   height: 0;
   background-image: url("/src/img/tekst_pp.png");
@@ -169,15 +177,17 @@ label{
 
 #tekst_temat1:hover + #obrazek_temat1 {
   display: block;
-  width: 400px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
 }
 
 #obrazek_temat2 {
   display: none;
   position: absolute;
-  top: 100px; 
-  left: 120px; 
+  /* top: 100px; 
+  left: 120px;  */
+  top: auto;
+  left: auto;
   width: 0;
   height: 0;
   background-image: url("/src/img/tekst_bazy.png");
@@ -187,15 +197,17 @@ label{
 
 #tekst_temat2:hover + #obrazek_temat2 {
   display: block;
-  width: 400px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
 }
 
 #obrazek_temat3 {
   display: none;
   position: absolute;
-  top: 100px; 
-  left: 250px; 
+  /* top: 100px; 
+  left: 250px;  */
+  top: auto;
+  left: auto;
   width: 0;
   height: 0;
   background-image: url("/src/img/tekst_grafika.png");
@@ -205,15 +217,17 @@ label{
 
 #tekst_temat3:hover + #obrazek_temat3 {
   display: block;
-  width: 400px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
 }
 
 #obrazek_temat4 {
   display: none;
   position: absolute;
-  top: 100px; 
-  left: 350px; 
+  /* top: 100px; 
+  left: 350px;  */
+  top: auto;
+  left: auto;
   width: 0;
   height: 0;
   background-image: url("/src/img/tekst_sieci.png");
@@ -223,8 +237,8 @@ label{
 
 #tekst_temat4:hover + #obrazek_temat4 {
   display: block;
-  width: 400px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
 }
 
 
@@ -243,5 +257,11 @@ label{
 
 
 
+.temat-label {
+  display: inline-block;
+  vertical-align: middle;
+  
+  /* margin-right: 10px; */
+}
 
 
