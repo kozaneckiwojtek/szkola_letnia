@@ -65,13 +65,13 @@ export function Opis() {
           <Col sm={12} md={12} lg={3} className="d-flex justify-content-center">
             <div className="miejsce">
               <img src={brzezinski} alt="brzezinski"></img>
-              <div class="caption">mgr. inż. Maurycy Brzeziński</div>
+              <div class="caption">mgr inż. Maurycy Brzeziński</div>
             </div>
           </Col>
           <Col sm={12} md={12} lg={3} className="d-flex justify-content-center">
             <div className="miejsce">
               <img src={jakubowski} alt="jakubowski"></img>
-              <div class="caption">mgr. inż. Borys Jakubowski</div>
+              <div class="caption">mgr inż. Borys Jakubowski</div>
             </div>
           </Col>
           <Col sm={12} md={12} lg={3} className="d-flex justify-content-center">
