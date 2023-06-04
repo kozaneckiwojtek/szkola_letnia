@@ -91,8 +91,6 @@ label{
 #obrazek1 {
   display: none;
   position: absolute;
-  /* top: 100px; 
-  left: 20px;  */
   top: auto;
   left: auto;
   width: 0;
@@ -111,8 +109,6 @@ label{
 #obrazek2 {
   display: none;
   position: absolute;
-  /* top: 100px; 
-  left: 120px;  */
   top: auto;
   left: auto;
   width: 0;
@@ -134,8 +130,6 @@ label{
 #obrazek3 {
   display: none;
   position: absolute;
-  /* top: 100px;
-  left: 300px;  */
   top: auto;
   left: auto;
   width: 0;
@@ -164,8 +158,6 @@ label{
 #obrazek_temat1 {
   display: none;
   position: absolute;
-  /* top: 100px; 
-  left: 20px;  */
   top: auto;
   left: auto;
   width: 0;
@@ -184,8 +176,6 @@ label{
 #obrazek_temat2 {
   display: none;
   position: absolute;
-  /* top: 100px; 
-  left: 120px;  */
   top: auto;
   left: auto;
   width: 0;
@@ -204,8 +194,6 @@ label{
 #obrazek_temat3 {
   display: none;
   position: absolute;
-  /* top: 100px; 
-  left: 250px;  */
   top: auto;
   left: auto;
   width: 0;
@@ -224,8 +212,6 @@ label{
 #obrazek_temat4 {
   display: none;
   position: absolute;
-  /* top: 100px; 
-  left: 350px;  */
   top: auto;
   left: auto;
   width: 0;
@@ -254,23 +240,18 @@ label{
 }
 
 
-
-
-
 .temat-label {
   display: inline-block;
   vertical-align: middle;
-  
-  /* margin-right: 10px; */
 }
-
-
 
 
 .temat-label input[type="radio"] {
-  margin-right: 10px; /* Dodaje odstęp na prawo pola wyboru */
+  margin-right: 10px;
 }
 
 .termin-label input[type="radio"] {
-  margin-right: 10px; /* Dodaje odstęp na prawo pola wyboru */
+  margin-right: 10px; 
 }
+
+

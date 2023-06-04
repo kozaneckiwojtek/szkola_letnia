@@ -88,6 +88,7 @@ export function Opis() {
           </Col>
         </Row>
       </Container>
+      
     </>
   );
 }

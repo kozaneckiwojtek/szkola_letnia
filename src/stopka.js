@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useRef } from 'react'
 
 import {Link} from "react-router-dom"
 
@@ -12,35 +11,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const Stopka = () => {
-  // const formRef = useRef(null)
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   };
-    // const onSubmit = (e) => { 
-    //     e.preventDefault()
-    //     const pytanie = formRef.current.pytanie.value 
-        
-
-    //     fetch("http://localhost:4444/posts",{
-    //         method:"POST",
-    //         body:JSON.stringify({pytanie}),
-    //         headers: {
-    //             'Content-Type':'application/json'
-    //         }
-                
-    //     }).then((res) =>{ return res.json()}).then(
-    //         (res)=>{
-    //             console.log(res)
-    //         }
-    //     )
-
-    //     window.location.reload();
-    // } 
-
-
 
     return (
       <Container fluid className='stopka'>
