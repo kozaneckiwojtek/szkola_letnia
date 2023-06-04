@@ -60,18 +60,7 @@ const Form = () => {
     return (
 
         <div>
-            {/* <form id="form" acceptCharset="UTF-8"> */}
-            <form
-                id="form"
-                acceptCharset="UTF-8"
-                name="registration-form" // Dodaj atrybut 'name' dla formularza
-                method="POST" // Dodaj atrybut 'method' jako 'POST'
-                data-netlify="true" // Dodaj atrybut 'data-netlify' jako 'true'
-                data-netlify-honeypot="bot-field" // Dodaj atrybut 'data-netlify-honeypot' jako 'bot-field' 
-                onSubmit={handleSubmit}
-                >
-                {/* Dodaj pole ukryte dla ochrony przed spamem */}
-                <input type="hidden" name="form-name" value="registration-form" />
+            <form id="form" acceptCharset="UTF-8">
 
                 <h1><strong>Formularz rejestracyjny na szkołę letnią</strong></h1>
 
