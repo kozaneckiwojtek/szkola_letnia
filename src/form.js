@@ -177,13 +177,13 @@ const Form = () => {
                 <div id='pole_nocleg'>
                     <label>Potrzebujesz noclegu? </label><br />
 
+                    <label class="nocleg-label">
                     <input type="radio" name="nocleg" value="TAK" required={true} data-validation-required-message="Wybierz opcję" />
-                    <label>
-
                         TAK
                     </label>
+
+                    <label class="nocleg-label">
                     <input type="radio" name="nocleg" value="NIE" required={true} data-validation-required-message="Wybierz opcję" />
-                    <label>
                         NIE
                     </label>
 

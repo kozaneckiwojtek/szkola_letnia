@@ -254,4 +254,8 @@ label{
   margin-right: 10px; 
 }
 
+.nocleg-label input[type="radio"] {
+  margin-right: 10px; 
+}
+
 
