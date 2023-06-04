@@ -44,7 +44,19 @@ const Form = () => {
     const handleMouseLeavekod = () => {
         setKodPlaceholder('Kod pocztowy');
     };
-
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+    
+        // Print form data for testing
+        for (let entry of formData.entries()) {
+          console.log(entry[0] + ': ' + entry[1]);
+        }
+    
+        // Reset the form
+        form.reset();
+    };
     return (
 
         <div>
@@ -56,6 +68,7 @@ const Form = () => {
                 method="POST" // Dodaj atrybut 'method' jako 'POST'
                 data-netlify="true" // Dodaj atrybut 'data-netlify' jako 'true'
                 data-netlify-honeypot="bot-field" // Dodaj atrybut 'data-netlify-honeypot' jako 'bot-field' 
+                onSubmit={handleSubmit}
                 >
                 {/* Dodaj pole ukryte dla ochrony przed spamem */}
                 <input type="hidden" name="form-name" value="registration-form" />
