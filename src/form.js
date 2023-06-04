@@ -44,19 +44,7 @@ const Form = () => {
     const handleMouseLeavekod = () => {
         setKodPlaceholder('Kod pocztowy');
     };
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        const formData = new FormData(form);
     
-        // Print form data for testing
-        for (let entry of formData.entries()) {
-          console.log(entry[0] + ': ' + entry[1]);
-        }
-    
-        // Reset the form
-        form.reset();
-    };
     return (
 
         <div>
