@@ -75,24 +75,24 @@ const Form = () => {
 
                 <h1><strong>Formularz rejestracyjny na szkołę letnią</strong></h1>
 
-                <input type="text" className="wejscie" id="name" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,20}" placeholder="Imię" aria-label="Wpisz swoje imię" data-validation-required-message="Podaj swoje imię" required />
+                <input type="text" name="imie" className="wejscie" id="name" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,20}" placeholder="Imię" aria-label="Wpisz swoje imię" data-validation-required-message="Podaj swoje imię" required />
 
-                <input type="text" class="wejscie" id="nazwisko" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,20}" placeholder="Nazwisko" required={true} data-validation-required-message="Podaj swoje nazwisko" /><br />
+                <input type="text" name="nazwisko" class="wejscie" id="nazwisko" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]{0,20}" placeholder="Nazwisko" required={true} data-validation-required-message="Podaj swoje nazwisko" /><br />
 
-                <input type="email" class="wejscie" id="email" placeholder={mailPlaceholder} required={true} data-validation-required-message="Podaj swój email" onMouseEnter={handleMouseEntermail} onMouseLeave={handleMouseLeavemail} />
+                <input type="email" name="mail" class="wejscie" id="email" placeholder={mailPlaceholder} required={true} data-validation-required-message="Podaj swój email" onMouseEnter={handleMouseEntermail} onMouseLeave={handleMouseLeavemail} />
 
 
-                <input type="tel" class="wejscie" id="nr_tel" pattern="[0-9]{0,9}" placeholder={telPlaceholder} required={true} data-validation-required-message="Podaj numer telefonu" onMouseEnter={handleMouseEntertel} onMouseLeave={handleMouseLeavetel} /><br />
+                <input type="tel" name="tel" class="wejscie" id="nr_tel" pattern="[0-9]{0,9}" placeholder={telPlaceholder} required={true} data-validation-required-message="Podaj numer telefonu" onMouseEnter={handleMouseEntertel} onMouseLeave={handleMouseLeavetel} /><br />
 
-                <input type="text" class="wejscie" id="ulica" placeholder={adresPlaceholder} required={true} data-validation-required-message="Ulica" onMouseEnter={handleMouseEnteradres} onMouseLeave={handleMouseLeaveadres} />
+                <input type="text" name="ulica" class="wejscie" id="ulica" placeholder={adresPlaceholder} required={true} data-validation-required-message="Ulica" onMouseEnter={handleMouseEnteradres} onMouseLeave={handleMouseLeaveadres} />
 
-                <input type="text" class="wejscie" id="miasto" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Miejscowość" required={true} data-validation-required-message="Podaj swoja Miejscowość" />
+                <input type="text" name="miasto" class="wejscie" id="miasto" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Miejscowość" required={true} data-validation-required-message="Podaj swoja Miejscowość" />
 
-                <input type="text" class="wejscie" id="kod" pattern="[0-9]{2}-[0-9]{3}" placeholder={kodPlaceholder} required={true} data-validation-required-message="Kod pocztowy" onMouseEnter={handleMouseEnterkod} onMouseLeave={handleMouseLeavekod} /><br />
+                <input type="text" name="kod" class="wejscie" id="kod" pattern="[0-9]{2}-[0-9]{3}" placeholder={kodPlaceholder} required={true} data-validation-required-message="Kod pocztowy" onMouseEnter={handleMouseEnterkod} onMouseLeave={handleMouseLeavekod} /><br />
 
-                <input type="text" class="wejscie" id="rok" pattern="[0-9]{4}" placeholder="Rok urodzenia" required={true} data-validation-required-message="Podaj rok urodzenia" onfocus="(this.type='date')" /><br />
+                <input type="text" name="rok" class="wejscie" id="rok" pattern="[0-9]{4}" placeholder="Rok urodzenia" required={true} data-validation-required-message="Podaj rok urodzenia" onfocus="(this.type='date')" /><br />
 
-                <input type="text" class="wejscie" id="uczelnia" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Nazwa uczelni" required={true} data-validation-required-message="Podaj nazwę uczelni" /><br />
+                <input type="text" name="uczelnia" class="wejscie" id="uczelnia" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{0,100}" placeholder="Nazwa uczelni" required={true} data-validation-required-message="Podaj nazwę uczelni" /><br />
 
                 <div id='pole_rok'>
                     <label>Wybierz rok studiów:</label>
