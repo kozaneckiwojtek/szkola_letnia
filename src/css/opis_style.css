@@ -24,7 +24,6 @@ body {
   font-size: 40px;
 }
 
-
 #tekst p {
   font-size: 25px;
   padding: 10px;
@@ -59,7 +58,6 @@ a.button {
 
 }
 
-
 a.button:hover {
   background-color: #222429;
   color: white;
@@ -83,12 +81,8 @@ a.button:hover {
 }
 
 .caption {
-  color: #F4F5F8;
-  text-align: center;
-}
-
-.miejsce:hover .caption {
   color: black;
+  text-align: center;
 }
 
 .caption {

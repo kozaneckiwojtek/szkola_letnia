@@ -28,7 +28,7 @@ const Baner = () => {
               </Col>
               <Col xs={9}>
                 <div>
-                  <p>ZADWOŃ DO NAS</p>
+                  <p>Zadzwon do nas</p>
                   <p><b>+48 123-456-789</b></p>
                 </div>
               </Col>

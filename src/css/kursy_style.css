@@ -1,3 +1,10 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .naglowek{
     text-align: center;
 }
@@ -14,6 +21,8 @@
 .kursy{
     padding: 50px;
 }
+
+
 
 .szary{
     color: gray;
@@ -54,3 +63,16 @@
 
 }
 
+#root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .kursy {
+    flex-grow: 1;
+  }
+  .kursy_naglowek {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  

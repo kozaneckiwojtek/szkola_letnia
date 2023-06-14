@@ -109,6 +109,7 @@ const Form = () => {
 
 
                 <div id='pole_temat'>
+                    <label >Temat warsztatów</label> <br/>
                     <label class="temat-label">
                         <input type="radio" name="temat" value="Kurs Programowania" required={true}
                             data-validation-required-message="Podaj temat" />
@@ -150,6 +151,7 @@ const Form = () => {
 
 
                 <div id='pole_termin'>
+                <label >Termin warsztatów</label> <br/>
                     <label class="termin-label">
                         <span></span>
                         <input type="radio" name="termin" value="1lipca - 15 lipca" required="required"
